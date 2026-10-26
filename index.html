@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Пепельный Легион</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 100%;
+        height: 100%;
+        background: #07060b;
+        overflow: hidden;
+        font-family: monospace;
+      }
+      #wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+          radial-gradient(ellipse at 50% 40%, #14101f 0%, #07060b 70%);
+      }
+      canvas {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        display: block;
+        box-shadow: 0 0 80px rgba(90, 70, 160, 0.18);
+        cursor: none;
+      }
+      #hint {
+        position: fixed;
+        bottom: 8px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #4a4560;
+        font-size: 11px;
+        letter-spacing: 2px;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap"><canvas id="game-canvas" width="480" height="270"></canvas></div>
+    <div id="game-state" hidden></div>
+    <div id="hint">V — ПОЛНЫЙ ЭКРАН · M — ЗВУК</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
