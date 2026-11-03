@@ -5,3 +5,8 @@ dist/
 !.env.example
 .DS_Store
 .vercel/
+
+# QA / скриншоты и релизные сборки десктопной версии
+.qa/
+.qa-*.png
+desktop/release/

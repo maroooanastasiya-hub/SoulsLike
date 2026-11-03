@@ -1,0 +1,63 @@
+{
+  "name": "ashen-legion-desktop",
+  "version": "1.0.0",
+  "description": "Пепельный Легион: Душа Павшего — десктопная экшн-игра о призраке павшего злодея",
+  "author": "Ashen Legion",
+  "license": "MIT",
+  "private": true,
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "vite",
+    "build": "tsc --noEmit && vite build",
+    "start": "electron .",
+    "preview": "vite preview",
+    "package": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  },
+  "build": {
+    "appId": "com.ashenlegion.desktop",
+    "productName": "Ashen Legion",
+    "copyright": "Ashen Legion",
+    "asar": true,
+    "icon": "build/icon.png",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.games",
+      "darkModeSupport": true,
+      "extendInfo": {
+        "CFBundleDisplayName": "Пепельный Легион"
+      }
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Game"
+    }
+  }
+}

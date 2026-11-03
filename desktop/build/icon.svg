@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#241a44"/>
+      <stop offset="55%" stop-color="#0d0a1c"/>
+      <stop offset="100%" stop-color="#050409"/>
+    </radialGradient>
+    <linearGradient id="hood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a3d7d"/>
+      <stop offset="55%" stop-color="#2a2149"/>
+      <stop offset="100%" stop-color="#141026"/>
+    </linearGradient>
+    <linearGradient id="robe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#332a5c"/>
+      <stop offset="100%" stop-color="#140f27"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8f7bff"/>
+      <stop offset="55%" stop-color="#6b8cff"/>
+      <stop offset="100%" stop-color="#eaffff"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#9fe8ff"/>
+      <stop offset="75%" stop-color="#8f7bff"/>
+      <stop offset="100%" stop-color="#8f7bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9fe8ff" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#8f7bff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#8f7bff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="24" y="24" width="976" height="976" rx="210" fill="url(#bg)"/>
+  <rect x="24" y="24" width="976" height="976" rx="210" fill="none" stroke="#9fe8ff" stroke-opacity="0.18" stroke-width="6"/>
+
+  <circle cx="512" cy="500" r="410" fill="url(#aura)"/>
+
+  <!-- ghost silhouette -->
+  <g>
+    <ellipse cx="512" cy="742" rx="208" ry="38" fill="#050409" opacity="0.55"/>
+
+    <!-- tattered robe -->
+    <path d="M 404 560
+             C 388 610 392 664 402 706
+             L 432 682 L 452 722 L 480 686 L 512 726
+             L 544 686 L 572 722 L 600 682 L 628 706
+             C 638 664 640 610 620 560
+             C 590 520 434 520 404 560 Z"
+          fill="url(#robe)"/>
+    <path d="M 452 566 C 446 620 452 662 470 692 C 482 670 490 648 490 618 C 490 592 478 574 452 566 Z"
+          fill="#8f7bff" opacity="0.22"/>
+
+    <!-- pauldrons -->
+    <path d="M 400 540 L 356 566 L 384 604 L 414 572 Z" fill="#4a3d7d"/>
+    <path d="M 624 540 L 668 566 L 640 604 L 610 572 Z" fill="#4a3d7d"/>
+
+    <!-- arms -->
+    <path d="M 396 566 C 366 592 366 626 384 650" stroke="#4e4279" stroke-width="34" stroke-linecap="round" fill="none"/>
+    <path d="M 628 566 C 660 590 664 622 648 646" stroke="#4e4279" stroke-width="34" stroke-linecap="round" fill="none"/>
+
+    <!-- hood -->
+    <path d="M 512 292
+             C 588 292 636 356 634 448
+             C 632 496 604 528 512 532
+             C 420 528 392 496 390 448
+             C 388 356 436 292 512 292 Z"
+          fill="url(#hood)"/>
+
+    <!-- inner darkness -->
+    <ellipse cx="512" cy="438" rx="74" ry="82" fill="#030208"/>
+
+    <!-- glowing eyes -->
+    <g filter="url(#glow)">
+      <path d="M 458 428 L 494 420 L 490 456 L 460 450 Z" fill="#9fe8ff"/>
+      <path d="M 566 428 L 530 420 L 534 456 L 564 450 Z" fill="#9fe8ff"/>
+      <rect x="470" y="425" width="12" height="12" rx="2" fill="#ffffff"/>
+      <rect x="541" y="425" width="12" height="12" rx="2" fill="#ffffff"/>
+    </g>
+
+    <!-- horns -->
+    <path d="M 442 344 C 414 320 396 286 388 240 C 424 276 456 300 484 320 Z" fill="#cfc4a4"/>
+    <path d="M 582 344 C 610 320 628 286 636 240 C 600 276 568 300 540 320 Z" fill="#cfc4a4"/>
+
+    <!-- broken crown -->
+    <g filter="url(#soft)">
+      <path d="M 428 300 C 462 288 562 288 596 300" stroke="#ffcf6b" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.8"/>
+      <path d="M 424 300 C 398 290 392 276 398 258 C 412 274 430 284 446 286 Z" fill="#ffcf6b"/>
+      <path d="M 600 300 C 626 290 632 276 626 258 C 612 274 594 284 578 286 Z" fill="#ffcf6b"/>
+      <path d="M 512 214 L 536 258 L 512 292 L 488 258 Z" fill="#ffcf6b"/>
+    </g>
+
+    <!-- belt chain -->
+    <path d="M 420 600 C 470 622 554 622 604 600" stroke="#e8dfc4" stroke-opacity="0.45" stroke-width="9" fill="none"/>
+    <g fill="none" stroke="#cdc4aa" stroke-opacity="0.4" stroke-width="6">
+      <ellipse cx="500" cy="612" rx="12" ry="18"/>
+      <ellipse cx="524" cy="614" rx="12" ry="18"/>
+    </g>
+
+    <!-- soul core -->
+    <g filter="url(#glow)">
+      <circle cx="512" cy="560" r="74" fill="url(#core)" opacity="0.85"/>
+      <circle cx="512" cy="560" r="24" fill="#ffffff"/>
+      <path d="M 512 520 L 526 548 L 512 574 L 498 548 Z" fill="#9fe8ff"/>
+    </g>
+
+    <!-- spectral blade -->
+    <g transform="translate(660 520) rotate(18)" filter="url(#glow)">
+      <path d="M 0 0 L 22 -214 L 44 0 L 22 34 Z" fill="url(#blade)"/>
+      <rect x="-30" y="-6" width="104" height="18" rx="9" fill="#e8dfc4"/>
+      <rect x="10" y="14" width="24" height="58" rx="10" fill="#6b5a8f"/>
+      <circle cx="22" cy="80" r="12" fill="#ffcf6b"/>
+    </g>
+  </g>
+</svg>
