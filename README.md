@@ -2,6 +2,8 @@
 
 Браузерная игра на TypeScript и Vite.
 
+Десктопная версия на Electron лежит в [`desktop/`](desktop/README.md). Что уже сделано и что в планах — в [`STATUS.md`](STATUS.md).
+
 ## Локальный запуск
 
 ```sh
